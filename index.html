@@ -28,13 +28,13 @@
         telegramWebApp.is_expandable = false;
         telegramWebApp.isVerticalSwipesEnabled = false;
 
-        if (telegramWebApp.isFullscreen) {
-          const script = document.createElement('script');
-          script.type = 'module';
-          script.crossOrigin = 'anonymous';
-          script.src = './assets/index-BtnHd-NV.js';
-          document.head.appendChild(script);
-        }
+
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.crossOrigin = 'anonymous';
+        script.src = './assets/index-BtnHd-NV.js';
+        document.head.appendChild(script);
+
       }
     });
   </script>
