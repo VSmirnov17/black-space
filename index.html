@@ -23,7 +23,7 @@
       const telegramWebApp = window.Telegram.WebApp;
 
       if (telegramWebApp) {
-        telegramWebApp.requestFullscreen();
+        telegramWebApp?.requestFullscreen();
         telegramWebApp.expand();
         telegramWebApp.is_expandable = false;
         telegramWebApp.isVerticalSwipesEnabled = false;
