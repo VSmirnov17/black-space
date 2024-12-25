@@ -24,11 +24,18 @@
 
       if (telegramWebApp) {
 
-        if (telegramWebApp.requestFullscreen) {
-          telegramWebApp?.requestFullscreen();
+        // if (telegramWebApp.requestFullscreen) {
+        //   telegramWebApp?.requestFullscreen();
+        // } else {
+        //   console.log('fullscreen not available');
+        // }
+
+        if (telegramWebApp.isVersionAtLeast('8.0')) {
+          telegramWebApp.requestFullscreen();
         } else {
-          console.log('fullscreen not available');
+          console.log('Метод requestFullscreen не поддерживается в этой версии Telegram.');
         }
+
         telegramWebApp.expand();
         telegramWebApp.is_expandable = false;
         telegramWebApp.isVerticalSwipesEnabled = false;
